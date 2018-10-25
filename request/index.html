@@ -7,5 +7,31 @@
 </head>
 <body>
     <button id="btn">按钮</button>
+
+    <script type="text/javascript">
+        $("#btn").bind("click",function() {
+            // http://192.168.1.111/json/cd.json
+            $.ajax({
+                type:'get',
+                url:'http://192.168.1.111/json/cd.json',
+                data:{a:1,b:2},//给服务器发送数据，暂时未使用
+                dataType:'json',//返回的数据类型
+                success:function(data,textStatus){ //成功后执行的函数
+                    console.log(data)
+
+                }
+            });
+
+        })
+
+
+
+    </script>
+
+
+
+
+
+
 </body>
 </html>
