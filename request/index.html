@@ -8,6 +8,11 @@
 </head>
 <body>
     <button id="btn">按钮</button>
+    <div id="box">
+
+
+    </div>
+
 
     <script type="text/javascript">
         $("#btn").bind("click",function() {
@@ -21,6 +26,17 @@
                     //console.log(data)
                     var d = data['CATALOG']['CD']
                     console.log(d)
+
+                    for (var i = 0; i < d.length; i++){
+                        var info = d[i];
+                        var $p = $('<p>' + info['name'] + '</p>');
+                        $('#box').append($p);
+
+
+                    }
+
+
+
                 }
             });
 
