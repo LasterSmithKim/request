@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-     <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="#" />
     <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
@@ -18,12 +18,16 @@
                 data:{a:1,b:2},//给服务器发送数据，暂时未使用
                 dataType:'json',//返回的数据类型
                 success:function(data,textStatus){ //成功后执行的函数
-                    console.log(data)
-
+                    //console.log(data)
+                    var d = data['CATALOG']['CD']
+                    console.log(var)
                 }
             });
 
         })
+
+
+
     </script>
 </body>
 </html>
